@@ -10,3 +10,4 @@
 # Directorio para guardar archivos utiles pero no necesarios para la funcionalidad
 _MaterialExtra/
 .vscode/
+node_modules
