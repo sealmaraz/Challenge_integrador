@@ -1,10 +1,11 @@
 const express = require('express');
 // no va esto porque no usaré un nuevo servidor const app = express();
 const router = express.Router();
+const mainControllers = require('../controllers/main.controller');
 
-router.get('/home',(req, res)=> res.send('Ruta a la vista de Home'));
-router.get('/contacto',(req, res)=> res.send('Ruta a la vista de Contacto'));
-router.get('/about',(req, res)=> res.send('Ruta a la vista de About'));
-router.get('/faqs',(req, res)=> res.send('Ruta a la vista de preguntas frecuentes'));
+router.get('/home', mainControllers.home);
+router.get('/contacto',mainControllers.contacto);
+router.get('/about',mainControllers.about);
+router.get('/faqs',mainControllers.faqs);
 
 module.exports = router;
